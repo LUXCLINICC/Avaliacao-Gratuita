@@ -167,9 +167,7 @@ if (formulario) {
             if (resposta.ok) {
 
                 document.querySelector(".popup-content").innerHTML = `
-
                     <div class="sucesso">
-
                         <h2>✨ Pedido recebido com sucesso!</h2>
 
                         <p>
@@ -181,16 +179,12 @@ if (formulario) {
                         <button class="btn-primary fechar-popup">
                             Fechar
                         </button>
-
                     </div>
-
                 `;
 
                 document.querySelector(".fechar-popup").addEventListener("click", function () {
-
                     popup.style.display = "none";
                     location.reload();
-
                 });
 
             } else {
@@ -207,6 +201,13 @@ if (formulario) {
         }
 
     });
+
+} // <-- ESTA CHAVETA É OBRIGATÓRIA
+
+// =====================================
+// MENU MOBILE
+// =====================================
+
 const menuToggle = document.querySelector(".menu-toggle");
 const nav = document.querySelector("nav");
 
