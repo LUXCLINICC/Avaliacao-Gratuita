@@ -1279,37 +1279,81 @@ nav a:hover::after{
 }
 
 
-/* Botão */
+/* =====================================
+   BOTÃO PREMIUM POPUP - LUX CLINIC
+===================================== */
 
 .btn-formulario{
 
     width:100%;
 
-    padding:16px;
+    height:58px;
 
     border:none;
 
-    border-radius:35px;
+    border-radius:40px;
 
     background:
     linear-gradient(
         135deg,
-        #55b8aa,
-        #8bd6cb
+        #3fa89a,
+        #79d3c6
     );
 
-    color:#fff;
+    color:#ffffff;
 
     font-size:16px;
 
     font-weight:600;
 
+    letter-spacing:.5px;
+
     cursor:pointer;
 
-    box-shadow:
-    0 10px 25px rgba(85,184,170,.35);
+    position:relative;
 
-    transition:.3s;
+    overflow:hidden;
+
+    box-shadow:
+    0 12px 30px rgba(63,168,154,.35);
+
+    transition:.35s ease;
+
+}
+
+
+/* efeito de brilho */
+
+.btn-formulario::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:.7s;
+
+}
+
+
+.btn-formulario:hover::before{
+
+    left:130%;
 
 }
 
@@ -1319,12 +1363,9 @@ nav a:hover::after{
     transform:translateY(-3px);
 
     box-shadow:
-    0 15px 35px rgba(85,184,170,.45);
+    0 18px 40px rgba(63,168,154,.45);
 
 }
-
-
-/* Fechar */
 
 .fechar{
 
