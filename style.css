@@ -940,9 +940,9 @@ nav a:hover::after{
 ===================================================== */
 
 .hidden{
-    opacity:0;
-    transform:translateY(40px);
-    transition:opacity .8s ease, transform .8s ease;
+    opacity:1;
+    transform:none;
+
 }
 
 .show{
@@ -1069,88 +1069,3 @@ nav a:hover::after{
     background:#3d978b;
 
 }
-<!-- =====================================================
-     FORMULÁRIO
-===================================================== -->
-
-<section id="formulario" class="formulario">
-
-    <div class="container">
-
-        <h2>Marque a Sua Avaliação Gratuita</h2>
-
-        <p>
-            Preencha o formulário e entraremos em contacto consigo o mais rapidamente possível.
-        </p>
-
-        <form action="https://api.web3forms.com/submit" method="POST">
-
-            <input type="hidden" name="access_key" value="d5ab485a-4967-441c-8bb0-1efd700b4bd0">
-
-            <input type="hidden" name="subject" value="Nova Avaliação - Lux Clinic">
-
-            <label>Nome *</label>
-            <input type="text" name="Nome" required>
-
-            <label>Telemóvel *</label>
-            <input type="tel" name="Telefone" required>
-
-            <label>Email *</label>
-            <input type="email" name="Email" required>
-
-            <label>O que pretende tratar?</label>
-
-            <select name="Tratamento">
-
-                <option>Redução de Medidas</option>
-                <option>Gordura Localizada</option>
-                <option>Celulite</option>
-                <option>Flacidez Corporal</option>
-                <option>Drenagem Linfática</option>
-                <option>Limpeza de Pele</option>
-                <option>Peeling Diamante</option>
-                <option>HidraLifting 360</option>
-                <option>Radiofrequência Facial</option>
-                <option>Acne</option>
-                <option>Manchas</option>
-                <option>Outro</option>
-
-            </select>
-
-            <label>Como nos conheceu?</label>
-
-            <select name="Origem">
-
-                <option>Google</option>
-                <option>Instagram</option>
-                <option>Facebook</option>
-                <option>Google Maps</option>
-                <option>Recomendação</option>
-                <option>Publicidade</option>
-                <option>Outro</option>
-
-            </select>
-
-            <label>Mensagem</label>
-
-            <textarea name="Mensagem" rows="5"></textarea>
-
-            <label class="check">
-
-                <input type="checkbox" required>
-
-                Aceito a Política de Privacidade.
-
-            </label>
-
-            <button type="submit">
-
-                Marcar Avaliação Gratuita
-
-            </button>
-
-        </form>
-
-    </div>
-
-</section>
