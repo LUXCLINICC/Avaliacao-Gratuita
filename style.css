@@ -1498,3 +1498,32 @@ nav a:hover::after{
     }
 
 }
+
+<header>
+
+    <div class="container">
+
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo.png" alt="Lux Clinic Portimão">
+            </a>
+        </div>
+
+        <div class="menu-toggle">☰</div>
+
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#tratamentos">Tratamentos</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#contactos">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <a href="#" class="btn abrirFormulario">
+            Marcar Avaliação
+        </a>
+
+    </div>
+
+</header>
