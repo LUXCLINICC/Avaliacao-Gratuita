@@ -1106,7 +1106,7 @@ nav a:hover::after{
 
 
 /* =====================================================
-   POPUP FORMULÁRIO
+   POPUP FORMULÁRIO PREMIUM - LUX CLINIC
 ===================================================== */
 
 .popup{
@@ -1116,53 +1116,306 @@ nav a:hover::after{
     left:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,.60);
+    background:rgba(0,0,0,.55);
+    backdrop-filter:blur(5px);
     justify-content:center;
     align-items:center;
     z-index:9999;
 }
 
+
+/* Caixa principal */
+
 .popup-content{
+
     position:relative;
+
     width:90%;
-    max-width:550px;
+    max-width:430px;
+
     max-height:90vh;
+
     overflow-y:auto;
-    background:#fff;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 15px 40px rgba(0,0,0,.20);
+
+    background:#ffffff;
+
+    padding:35px 30px;
+
+    border-radius:28px;
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.20);
+
+    animation:
+    aparecerPopup .4s ease;
+
 }
+
+
+/* Logo */
+
+.popup-logo{
+
+    display:block;
+
+    width:120px;
+
+    margin:0 auto 15px;
+
+}
+
+
+/* Título */
+
+.popup-content h2{
+
+    text-align:center;
+
+    color:#55b8aa;
+
+    font-size:26px;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+
+}
+
+
+/* Texto */
+
+.popup-texto{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:15px;
+
+    line-height:1.5;
+
+    margin-bottom:25px;
+
+}
+
+
+/* Campos */
+
+.form-group{
+
+    margin-bottom:18px;
+
+}
+
+
+.form-group label{
+
+    display:block;
+
+    font-size:14px;
+
+    color:#555;
+
+    margin-bottom:7px;
+
+    font-weight:500;
+
+}
+
+
+.form-group input,
+.form-group select{
+
+    width:100%;
+
+    padding:14px 15px;
+
+    border-radius:14px;
+
+    border:1px solid #e5e5e5;
+
+    background:#fafafa;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus{
+
+    background:#fff;
+
+    border-color:#55b8aa;
+
+    box-shadow:
+    0 0 0 4px rgba(85,184,170,.15);
+
+}
+
+
+/* Privacidade */
+
+.privacidade{
+
+    background:#f6f6f6;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    font-size:12px;
+
+    color:#777;
+
+    line-height:1.4;
+
+    margin:15px 0 20px;
+
+}
+
+
+/* Botão */
+
+.btn-formulario{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #55b8aa,
+        #8bd6cb
+    );
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 25px rgba(85,184,170,.35);
+
+    transition:.3s;
+
+}
+
+
+.btn-formulario:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 15px 35px rgba(85,184,170,.45);
+
+}
+
+
+/* Fechar */
 
 .fechar{
+
     position:absolute;
+
     top:15px;
+
     right:20px;
+
     font-size:30px;
+
     color:#55b8aa;
+
     cursor:pointer;
+
     transition:.3s;
+
 }
+
 
 .fechar:hover{
+
     color:#3d978b;
+
 }
 
-/* =====================================================
-   POPUP RESPONSIVO
-===================================================== */
+
+/* Animação */
+
+@keyframes aparecerPopup{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(30px)
+        scale(.95);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+}
+
+
+/* Mobile */
 
 @media (max-width:768px){
 
     .popup-content{
+
         width:95%;
-        padding:25px;
+
+        padding:25px 20px;
+
+        border-radius:22px;
+
     }
 
+
+    .popup-logo{
+
+        width:100px;
+
+    }
+
+
+    .popup-content h2{
+
+        font-size:23px;
+
+    }
+
+
     .fechar{
+
         font-size:28px;
+
         top:10px;
+
         right:15px;
+
     }
 
 }

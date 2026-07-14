@@ -887,80 +887,118 @@ WhatsApp
 
         <span class="fechar">&times;</span>
 
-        <h2>Marque a Sua Avaliação Gratuita</h2>
+        <img src="images/logo.png" class="popup-logo" alt="Lux Clinic">
 
-        <p>
-            Preencha os seus dados e entraremos em contacto consigo.
+        <h2>Agende a Sua Avaliação Gratuita</h2>
+
+        <p class="popup-texto">
+            Preencha os seus dados e entraremos em contacto consigo para agendar a sua avaliação personalizada.
         </p>
+
 
         <form action="https://api.web3forms.com/submit" method="POST">
 
-            <input type="hidden"
-                   name="access_key"
+            <input type="hidden" 
+                   name="access_key" 
                    value="d5ab485a-4967-441c-8bb0-1efd700b4bd0">
 
-            <input type="hidden"
-                   name="subject"
+            <input type="hidden" 
+                   name="subject" 
                    value="Novo pedido de avaliação - Lux Clinic">
-                   
-            <input type="text"
-           
-                   name="Nome"
-           
-                   placeholder="Nome"
-           
-                   required>
 
 
-            <input type="tel"
-                   name="Telefone"
-                   placeholder="Telemóvel"
-                   required>
+            <div class="form-group">
 
-            <input type="email"
-                   name="Email"
-                   placeholder="Email"
-                   required>
+                <label>👤 Nome</label>
 
-            <select name="Tratamento" required>
+                <input 
+                    type="text"
+                    name="Nome"
+                    placeholder="Introduza o seu nome"
+                    required>
 
-                <option value="">O que pretende tratar?</option>
+            </div>
 
-                <option>Corpo</option>
-                <option>Rosto</option>
-                <option>Celulite</option>
-                <option>Flacidez</option>
-                <option>Gordura Localizada</option>
-                <option>Limpeza de Pele</option>
-                <option>Outro</option>
 
-            </select>
+            <div class="form-group">
 
-            <select name="Origem">
+                <label>📱 Telemóvel</label>
 
-                <option value="">Como nos conheceu?</option>
+                <input 
+                    type="tel"
+                    name="Telefone"
+                    placeholder="9XXXXXXXX"
+                    required>
 
-                <option>Google</option>
-                <option>Instagram</option>
-                <option>Facebook</option>
-                <option>Google Maps</option>
-                <option>Recomendação</option>
-                <option>Outro</option>
+            </div>
 
-            </select>
 
-            <textarea
-                name="Mensagem"
-                rows="4"
-                placeholder="Mensagem (opcional)"></textarea>
+            <div class="form-group">
 
-            <button type="submit">
+                <label>✉️ Email</label>
 
-                Enviar Pedido
+                <input 
+                    type="email"
+                    name="Email"
+                    placeholder="email@exemplo.pt"
+                    required>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>✨ O que pretende tratar?</label>
+
+                <select name="Tratamento" required>
+
+                    <option value="">Selecione uma opção</option>
+                    <option>Corpo</option>
+                    <option>Rosto</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>📍 Como nos conheceu?</label>
+
+                <select name="Origem">
+
+                    <option value="">Selecione uma opção</option>
+                    <option>Google</option>
+                    <option>Instagram</option>
+                    <option>Facebook</option>
+                    <option>Google Maps</option>
+                    <option>Recomendação</option>
+                    <option>Outro</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="privacidade">
+
+                🔒 Os seus dados serão utilizados apenas para contacto pela Lux Clinic.
+
+            </div>
+
+
+            <button type="submit" class="btn-formulario">
+
+                Agendar Avaliação Gratuita
 
             </button>
 
+
         </form>
+
+    </div>
+
+</div>
 
 <div id="mensagemSucesso" style="display:none;">
     <h3>Pedido enviado com sucesso! ✅</h3>
