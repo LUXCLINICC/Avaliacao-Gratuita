@@ -1,0 +1,1156 @@
+﻿/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins', Arial, sans-serif;
+    background:linear-gradient(
+        180deg,
+        #f8fdfc 0%,
+        #eef9f6 40%,
+        #ffffff 100%
+    );
+    color:#555;
+    line-height:1.6;
+    overflow-x:hidden;
+    min-width:320px;
+}
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+a{
+    text-decoration:none;
+    transition:.3s;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    position:sticky;
+    top:0;
+    left:0;
+    width:100%;
+    background:#ffffff;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:70px;
+    padding:12px 0;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    height:110px;
+    width:auto;
+
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+nav ul{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    color:#444;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:500;
+    position:relative;
+}
+
+nav a:hover{
+    color:#55b8aa;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#55b8aa;
+    transition:.3s;
+}
+
+nav a:hover::after{
+    width:100%;
+}
+
+
+/* =====================================================
+   BOTÃO
+===================================================== */
+
+.btn{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    padding:14px 28px;
+    background:#55b8aa;
+    color:#ffffff;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:600;
+    white-space:nowrap;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#3d978b;
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(85,184,170,.30);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    background:#ffffff;
+    padding:90px 0;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-text{
+    max-width:620px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#e8f8f5;
+    color:#3d978b;
+    padding:10px 20px;
+    border-radius:40px;
+    font-size:15px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:58px;
+    color:#55b8aa;
+    line-height:1.1;
+    font-weight:700;
+    letter-spacing:-1px;
+    margin-bottom:15px;
+}
+
+.hero-subtitle{
+    font-size:28px;
+    color:#444;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:18px;
+    color:#666;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:380px;
+    border-radius:22px;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+    transition:.35s;
+}
+
+.hero-image img:hover{
+    transform:translateY(-8px);
+}
+
+
+/* =====================================================
+   BOTÕES HERO
+===================================================== */
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-top:10px;
+}
+
+.btn-primary,
+.btn-secondary{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    min-width:220px;
+    padding:16px 30px;
+    border-radius:40px;
+    font-weight:600;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#55b8aa;
+    color:#ffffff;
+    box-shadow:0 10px 25px rgba(85,184,170,.25);
+}
+
+.btn-primary:hover{
+    background:#3d978b;
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    background:#ffffff;
+    color:#55b8aa;
+    border:2px solid #55b8aa;
+}
+
+.btn-secondary:hover{
+    background:#55b8aa;
+    color:#ffffff;
+    transform:translateY(-3px);
+}
+
+
+/* =====================================================
+   HERO RESPONSIVO
+===================================================== */
+
+@media (max-width:992px){
+
+    .hero{
+        padding:70px 0;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+        text-align:center;
+    }
+
+    .hero-text{
+        max-width:100%;
+    }
+
+    .hero-image{
+        order:-1;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+
+    .hero-subtitle{
+        font-size:24px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero-subtitle{
+        font-size:20px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        min-width:100%;
+    }
+
+}
+
+/* =====================================================
+   OBJETIVOS
+===================================================== */
+
+.objetivos{
+    padding:90px 0;
+    background:#f7fcfb;
+    text-align:center;
+}
+
+.objetivos h2{
+    font-size:38px;
+    color:#55b8aa;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.objetivos p{
+    max-width:700px;
+    margin:0 auto 50px;
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.objetivos .cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.objetivos .card{
+    background:#ffffff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+    text-align:left;
+}
+
+.objetivos .card:hover{
+    transform:translateY(-6px);
+}
+
+.objetivos .card h3{
+    color:#55b8aa;
+    font-size:24px;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.objetivos .card ul{
+    list-style:none;
+}
+
+.objetivos .card li{
+    margin-bottom:14px;
+    color:#555;
+    font-size:16px;
+}
+
+@media(max-width:768px){
+
+    .objetivos .cards{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =====================================================
+   TRATAMENTOS
+===================================================== */
+
+.tratamentos{
+    padding:90px 0;
+    background:#ffffff;
+}
+
+.tratamentos h2{
+    text-align:center;
+    color:#55b8aa;
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.tratamentos > .container > p{
+    max-width:720px;
+    margin:0 auto 60px;
+    text-align:center;
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* Título das categorias */
+
+.categoria-titulo{
+    text-align:center;
+    font-size:30px;
+    color:#55b8aa;
+    margin:60px 0 35px;
+    font-weight:700;
+}
+
+.tratamentos .cards{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+    margin-bottom:40px;
+}
+
+.tratamentos .card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+
+    display:flex;
+    flex-direction:column;
+
+    height:100%;
+    justify-content:flex-start;
+
+    height:100%;
+}
+
+.tratamentos .card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+
+.tratamentos .card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.tratamentos .card h3{
+    padding:20px 20px 10px;
+    color:#55b8aa;
+    font-size:22px;
+    text-align:center;
+}
+
+.tratamentos .card p{
+    padding:0 20px 25px;
+    color:#666;
+    text-align:center;
+    line-height:1.7;
+    flex-grow:1;
+
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media(max-width:992px){
+
+    .tratamentos .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .tratamentos .cards{
+        grid-template-columns:1fr;
+    }
+
+    .categoria-titulo{
+        font-size:26px;
+    }
+
+}
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.sobre{
+    padding:90px 0;
+    background:#ffffff;
+    text-align:center;
+}
+
+.sobre h2{
+    color:#55b8aa;
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.sobre p{
+    max-width:850px;
+    margin:0 auto;
+    color:#666;
+    font-size:18px;
+    line-height:1.9;
+}
+
+
+/* =====================================================
+   CONTACTOS
+===================================================== */
+
+.contactos{
+    padding:90px 0;
+    background:#f7fcfb;
+    text-align:center;
+}
+
+.contactos h2{
+    color:#55b8aa;
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.contactos-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin:50px 0;
+}
+
+.contactos-grid div{
+    background:#ffffff;
+    padding:35px 30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.contactos-grid div:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+
+.contactos-grid h3{
+    color:#55b8aa;
+    font-size:22px;
+    margin-bottom:15px;
+}
+
+.contactos-grid p{
+    color:#666;
+    font-size:16px;
+    line-height:1.8;
+}
+
+.contactos .btn-primary{
+    margin-top:15px;
+}
+
+
+/* =====================================================
+   MAPA
+===================================================== */
+
+.mapa{
+    padding:90px 0;
+    background:#ffffff;
+    text-align:center;
+}
+
+.mapa h2{
+    color:#55b8aa;
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:35px;
+}
+
+.mapa iframe{
+    width:100%;
+    height:420px;
+    border:0;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media(max-width:900px){
+
+    .contactos-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sobre p{
+        font-size:17px;
+    }
+
+    .mapa iframe{
+        height:320px;
+    }
+
+}
+/* =====================================================
+   RESPONSIVO
+===================================================== */
+
+@media (max-width:992px){
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .tratamentos .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .contactos-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+@media (max-width:768px){
+
+    nav ul{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero-subtitle{
+        font-size:22px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .tratamentos .cards{
+        grid-template-columns:1fr;
+    }
+
+    .whatsapp{
+        right:15px;
+        bottom:15px;
+        padding:12px 18px;
+        font-size:15px;
+    }
+
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+.faq{
+    padding:90px 0;
+    background:#f7fcfb;
+}
+
+.faq h2{
+    text-align:center;
+    color:#55b8aa;
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:45px;
+}
+
+.faq-item{
+    background:#ffffff;
+    padding:25px 30px;
+    margin-bottom:20px;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.faq-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 30px rgba(0,0,0,.10);
+}
+
+.faq-item h3{
+    color:#55b8aa;
+    margin-bottom:12px;
+    font-size:20px;
+}
+
+.faq-item p{
+    color:#666;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   WHATSAPP FIXO
+===================================================== */
+
+.whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:#25D366;
+    color:#ffffff;
+    padding:15px 24px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
+    z-index:999;
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.08);
+}
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+    background:#1f1f1f;
+    color:#ffffff;
+    padding:50px 20px;
+    text-align:center;
+}
+
+.footer .container{
+    max-width:900px;
+    margin:0 auto;
+}
+
+.footer-logo{
+    width:150px;
+    height:auto;
+    margin:0 auto 20px;
+}
+
+.footer p{
+    margin:8px 0;
+    line-height:1.8;
+    color:#e5e5e5;
+}
+
+.social{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:20px;
+    margin:25px 0;
+}
+
+.social a{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+.social a:hover{
+    color:#55b8aa;
+}
+
+.social img{
+    width:24px;
+    height:24px;
+}
+
+.copyright{
+    margin-top:25px;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.15);
+    font-size:14px;
+    color:#bdbdbd;
+}
+
+
+/* =====================================================
+   RESULTADOS
+===================================================== */
+
+.resultados{
+    padding:90px 0;
+    background:#f7fcfb;
+}
+
+.resultados h2{
+    text-align:center;
+    font-size:38px;
+    color:#55b8aa;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.resultados p{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 50px;
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+}
+
+.resultados-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:35px;
+}
+
+.resultado-card{
+    background:#ffffff;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.resultado-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.resultado-card h3{
+    text-align:center;
+    color:#55b8aa;
+    margin-bottom:25px;
+}
+
+.antes-depois{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.antes-depois div{
+    text-align:center;
+}
+
+.antes-depois span{
+    display:block;
+    margin-bottom:10px;
+    font-weight:600;
+    color:#555;
+}
+
+.antes-depois img{
+    width:100%;
+    max-width:220px;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+    margin:auto;
+    transition:.35s;
+}
+
+.antes-depois img:hover{
+    transform:scale(1.05);
+}
+
+
+/* =====================================================
+   RESPONSIVO RESULTADOS E FOOTER
+===================================================== */
+
+@media (max-width:768px){
+
+    .resultados-grid{
+        grid-template-columns:1fr;
+    }
+
+    .antes-depois img{
+        max-width:160px;
+        height:220px;
+    }
+
+    .social{
+        flex-direction:column;
+        gap:15px;
+    }
+
+}
+
+
+/* =====================================================
+   ANIMAÇÕES
+===================================================== */
+
+.hidden{
+    opacity:0;
+    transform:translateY(40px);
+    transition:opacity .8s ease, transform .8s ease;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =====================================================
+   RESPONSIVO FINAL
+===================================================== */
+
+@media (max-width:900px){
+
+    .resultados-grid{
+        grid-template-columns:1fr;
+    }
+
+    .antes-depois{
+        gap:12px;
+    }
+
+    .antes-depois img{
+        max-width:170px;
+        height:230px;
+    }
+
+    .footer-logo{
+        width:130px;
+    }
+
+    .social{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .contactos-grid{
+        grid-template-columns:1fr;
+    }
+
+    .objetivos .cards{
+        grid-template-columns:1fr;
+    }
+
+    .tratamentos .cards{
+        grid-template-columns:1fr;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero-image{
+        margin-top:30px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .container{
+        width:92%;
+    }
+
+    h1{
+        font-size:32px;
+    }
+
+    h2{
+        font-size:28px;
+    }
+
+    .hero-subtitle{
+        font-size:20px;
+    }
+
+    .btn,
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+    }
+
+    .whatsapp{
+        right:15px;
+        bottom:15px;
+        padding:14px 18px;
+        font-size:14px;
+    }
+
+}
+
+/* =====================================================
+   POPUP FORMULÁRIO
+===================================================== */
+
+.popup{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.6);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-content{
+    background:#fff;
+    width:90%;
+    max-width:550px;
+    padding:35px;
+    border-radius:20px;
+    position:relative;
+}
+
+.fechar{
+    position:absolute;
+    top:15px;
+    right:20px;
+    font-size:30px;
+    cursor:pointer;
+}
+
+    background:#3d978b;
+
+}
+<!-- =====================================================
+     FORMULÁRIO
+===================================================== -->
+
+<section id="formulario" class="formulario">
+
+    <div class="container">
+
+        <h2>Marque a Sua Avaliação Gratuita</h2>
+
+        <p>
+            Preencha o formulário e entraremos em contacto consigo o mais rapidamente possível.
+        </p>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="d5ab485a-4967-441c-8bb0-1efd700b4bd0">
+
+            <input type="hidden" name="subject" value="Nova Avaliação - Lux Clinic">
+
+            <label>Nome *</label>
+            <input type="text" name="Nome" required>
+
+            <label>Telemóvel *</label>
+            <input type="tel" name="Telefone" required>
+
+            <label>Email *</label>
+            <input type="email" name="Email" required>
+
+            <label>O que pretende tratar?</label>
+
+            <select name="Tratamento">
+
+                <option>Redução de Medidas</option>
+                <option>Gordura Localizada</option>
+                <option>Celulite</option>
+                <option>Flacidez Corporal</option>
+                <option>Drenagem Linfática</option>
+                <option>Limpeza de Pele</option>
+                <option>Peeling Diamante</option>
+                <option>HidraLifting 360</option>
+                <option>Radiofrequência Facial</option>
+                <option>Acne</option>
+                <option>Manchas</option>
+                <option>Outro</option>
+
+            </select>
+
+            <label>Como nos conheceu?</label>
+
+            <select name="Origem">
+
+                <option>Google</option>
+                <option>Instagram</option>
+                <option>Facebook</option>
+                <option>Google Maps</option>
+                <option>Recomendação</option>
+                <option>Publicidade</option>
+                <option>Outro</option>
+
+            </select>
+
+            <label>Mensagem</label>
+
+            <textarea name="Mensagem" rows="5"></textarea>
+
+            <label class="check">
+
+                <input type="checkbox" required>
+
+                Aceito a Política de Privacidade.
+
+            </label>
+
+            <button type="submit">
+
+                Marcar Avaliação Gratuita
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
