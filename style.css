@@ -1178,3 +1178,36 @@ nav a:hover::after{
     }
 
 }
+/* =====================================
+   MENU MOBILE
+===================================== */
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:#55b8aa;
+}
+
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        width:100%;
+        margin-top:15px;
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+}
