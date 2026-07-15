@@ -1499,31 +1499,50 @@ nav a:hover::after{
 
 }
 
-<header>
+@media (max-width:768px){
 
-    <div class="container">
+header .container{
 
-        <div class="logo">
-            <a href="#">
-                <img src="images/logo.png" alt="Lux Clinic Portimão">
-            </a>
-        </div>
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    flex-wrap:nowrap !important;
 
-        <div class="menu-toggle">☰</div>
+}
 
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tratamentos">Tratamentos</a></li>
-                <li><a href="#resultados">Resultados</a></li>
-                <li><a href="#contactos">Contactos</a></li>
-            </ul>
-        </nav>
 
-        <a href="#" class="btn abrirFormulario">
-            Marcar Avaliação
-        </a>
+header .logo{
 
-    </div>
+    margin:0 !important;
+    flex-shrink:0;
 
-</header>
+}
+
+
+header .logo img{
+
+    width:130px;
+
+}
+
+
+.menu-toggle{
+
+    position:relative !important;
+
+    display:flex !important;
+
+    margin-left:auto !important;
+    flex-shrink:0;
+
+}
+
+
+header nav{
+
+    top:70px;
+
+}
+
+}
