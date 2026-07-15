@@ -1598,3 +1598,51 @@ nav a:hover::after{
 
 
 }
+
+/* ===========================
+   CORREÇÃO MENU DESKTOP
+=========================== */
+
+@media (min-width:769px){
+
+    .menu-toggle{
+        display:none !important;
+    }
+
+
+    header .container{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:space-between;
+
+    }
+
+
+    header nav{
+
+        display:block !important;
+
+    }
+
+
+    header nav ul{
+
+        display:flex;
+
+        flex-direction:row;
+
+        gap:30px;
+
+    }
+
+
+    header .btn{
+
+        display:inline-flex !important;
+
+    }
+
+}
