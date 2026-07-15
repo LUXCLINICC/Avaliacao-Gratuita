@@ -1461,56 +1461,107 @@ nav a:hover::after{
 
 }
 
+
 /* ===========================
-   MENU MOBILE
+   MENU MOBILE PREMIUM
 =========================== */
 
 .menu-toggle{
+
     display:none;
-    font-size:34px;
-    color:#55b8aa;
-    cursor:pointer;
+
 }
+
 
 @media(max-width:768px){
 
+
     .menu-toggle{
-        display:block;
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        width:44px;
+
+        height:44px;
+
+        background:#f3faf8;
+
+        border-radius:50%;
+
+        color:#55b8aa;
+
+        font-size:24px;
+
+        cursor:pointer;
+
+        transition:.3s;
+
     }
+
+
+    .menu-toggle:hover{
+
+        background:#55b8aa;
+
+        color:#ffffff;
+
+    }
+
 
     nav{
+
         display:none;
+
         width:100%;
+
         margin-top:15px;
+
     }
+
 
     nav.active{
+
         display:block;
+
     }
+
 
     nav ul{
+
         flex-direction:column;
+
         gap:15px;
+
     }
+
 
     .btn{
+
         display:none;
+
     }
 
+
+    header .container{
+
+        display:flex !important;
+
+        flex-direction:row !important;
+
+        align-items:center !important;
+
+        justify-content:space-between !important;
+
+        flex-wrap:nowrap !important;
+
+    }
+
+
 }
-
-@media (max-width:768px){
-
-header .container{
-
-    display:flex !important;
-    flex-direction:row !important;
-    align-items:center !important;
-    justify-content:space-between !important;
-    flex-wrap:nowrap !important;
-
-}
-
 
 header .logo{
 
